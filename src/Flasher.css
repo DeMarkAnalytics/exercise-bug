@@ -1,0 +1,37 @@
+/* set up some color variables to use */
+:root {
+  --background-blue: #2385F9;
+}
+
+.flasher {
+ display: flex;
+ height: 400px;
+ justify-content: center;
+ align-items: center;
+}
+
+.price {
+  padding: 20px;
+  font-size: 40px;
+  color: black;
+  background-color: white;
+}
+
+.price-flash {
+  animation: flash 3s;
+}
+
+@keyframes flash {
+  0% {
+    color: white;
+    background-color: var(--background-blue);
+  }
+  30% {
+    color: white;
+    background-color: var(--background-blue);
+  }
+  100% {
+    color: black;
+    background-color: white;
+  }
+}
