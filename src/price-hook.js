@@ -6,10 +6,6 @@ export default function useRandomPrice() {
 
   // set a random time for every price update
   React.useEffect(() => {
-    if (timer) {
-      clearInterval(timer);
-    }
-
     const randTime = (Math.random() * (5000) + 2000);
     const intervalId = setInterval(() => {
       // set a random price from 0 to 100
