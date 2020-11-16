@@ -18,7 +18,7 @@
 }
 
 .price-flash {
-  animation: flash 3s;
+  animation: flash 4s;
 }
 
 @keyframes flash {

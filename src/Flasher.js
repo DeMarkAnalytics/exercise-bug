@@ -1,20 +1,9 @@
 import React from 'react';
+import useRandomPrice from './price-hook';
 import './Flasher.css';
 
 function Flasher() {
-  const [newPrice, setNewPrice] = React.useState(0);
-
-  React.useEffect(() => {
-    const intervalId = window.setInterval(() => {
-      // set a random number from 0 to 100
-      setNewPrice((Math.random() * 1000).toFixed(2)); 
-    }, 3000);
-
-    return () => {
-      // clean up interval on component unmount
-      window.clearInterval(intervalId)
-    }
-  }, [])
+  const newPrice = useRandomPrice();
 
   return (
     <div className="flasher">
